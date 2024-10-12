@@ -4,6 +4,8 @@ import { Response, NextFunction } from "express";
 import createError from "http-errors";
 import jwt from "jsonwebtoken";
 import CustomRequest from "../interfaces/custom.request";
+import userModel from "../model/user.model";
+import IUser from "../interfaces/user.interface";
 
 async function authentication(
   req: CustomRequest,
@@ -16,8 +18,10 @@ async function authentication(
     if (!token) throw createError.BadRequest("Token not found");
     const verify = await jwt.verify(token, process.env.SECRET_KEY as string);
     req.user = verify;
-    // console.log(req.user);
-    if (req.user.status !== "active")
+    const user: IUser | null = await userModel
+      .findById(req.user._id)
+      .select("status");
+    if (user && user.status !== "active")
       throw createError.BadRequest("User profile is not active");
     next();
   } catch (error) {

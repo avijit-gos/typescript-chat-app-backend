@@ -1,0 +1,7 @@
+{"type":"error","url":"/api/chat/6708e2fe1eea999b40f2e2c1","method":"GET","message":"No chat data found","timestamp":"2024-10-12T07:59:18.751Z"}
+{"type":"error","url":"/api/chat//delete/:chatId","method":"DELETE","message":"Cast to ObjectId failed for value \":chatId\" (type string) at path \"_id\" for model \"Chat\"","timestamp":"2024-10-12T12:34:14.176Z"}
+{"type":"error","url":"/api/chat//delete/670a2a3dcd96d16e46b0d955","method":"DELETE","message":"Chat has been deleted","timestamp":"2024-10-12T12:36:31.382Z"}
+{"type":"error","url":"/api/chat/get-members/6708dafd2b58093ef6f64460","method":"GET","message":"Token not found","timestamp":"2024-10-12T12:40:47.568Z"}
+{"type":"error","url":"/api/chat/get-members/6708dafd2b58093ef6f64460","method":"GET","message":"Cast to ObjectId failed for value \"[\n  new ObjectId('6707fc550504513e16524451'),\n  new ObjectId('6707fc620504513e16524454')\n]\" (type Array) at path \"_id\" for model \"User\"","timestamp":"2024-10-12T12:42:42.476Z"}
+{"type":"error","url":"/api/chat/get-members/6708dafd2b58093ef6f64460","method":"GET","message":"Cast to ObjectId failed for value \"{ _id: { '$in': [ [Array] ] } }\" (type Object) at path \"_id\" for model \"User\"","timestamp":"2024-10-12T12:43:39.862Z"}
+{"type":"error","url":"/api/chat/get-members/6708dafd2b58093ef6f64460","method":"GET","message":"Cast to ObjectId failed for value \"[\n  new ObjectId('6707fc550504513e16524451'),\n  new ObjectId('6707fc620504513e16524454')\n]\" (type Array) at path \"_id\" for model \"User\"","timestamp":"2024-10-12T12:44:42.002Z"}
