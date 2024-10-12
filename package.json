@@ -20,6 +20,7 @@
     "@types/jsonwebtoken": "^9.0.7",
     "@types/mongoose": "^5.11.96",
     "@types/morgan": "^1.9.9",
+    "@types/winston": "^2.4.4",
     "bcrypt": "^5.1.1",
     "cloudinary": "^2.5.1",
     "cors": "^2.8.5",
@@ -30,7 +31,8 @@
     "http-errors": "^2.0.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.7.0",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "winston": "^3.15.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.12.0",

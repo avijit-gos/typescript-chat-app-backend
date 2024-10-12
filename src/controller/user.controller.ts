@@ -74,7 +74,7 @@ export const loginUser = async (
     });
     if (!user) throw createError.BadRequest("No user found");
     if (user && user.status !== "active")
-      throw createError.BadRequest("Account is permission to loggedIn");
+      throw createError.BadRequest("Account don't have permission to loggedIn");
 
     //***Check user password
     const isPasswordCorrect: boolean = await comparePassword(
@@ -295,13 +295,11 @@ export const deleteAccount = async (
       },
       { new: true }
     );
-    res
-      .status(200)
-      .json({
-        message: "Account has been deleted",
-        status: 200,
-        user: deleteAccount,
-      });
+    res.status(200).json({
+      message: "Account has been deleted",
+      status: 200,
+      user: deleteAccount,
+    });
   } catch (error) {
     next(error);
   }
